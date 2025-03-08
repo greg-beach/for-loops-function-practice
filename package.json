@@ -31,5 +31,6 @@
   },
   "dependencies": {
     "vitest": "^0.26.2"
-  }
+  },
+  "type": "module"
 }
