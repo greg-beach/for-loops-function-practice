@@ -10,9 +10,14 @@
 
 export function getAverage(array) {
   // Your code goes here...
-
+  var total = 0;
+  for (var i = 0; i < array.length; i++){
+    total += array[i];
+  };
+  return total / array.length;
 }
 
+// console.log(getAverage([22, 45, 4, 65]));
 
 /** 
  * PART 2
@@ -23,9 +28,16 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
-
+  var total = 0
+  for (var i in str) {
+    if (!isNaN(parseInt(str[i]))) {
+      total += parseInt(str[i])
+    };
+  };
+  return total;
 }
-
+// console.log(getStringSum("GH2U87A"))
+// console.log(getStringSum("GHIUJUHSG"))
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
