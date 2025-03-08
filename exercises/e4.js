@@ -5,12 +5,27 @@
 
 export function findMinValueInArray(array) {
   // Your code goes here...
+  var min_so_far = Number.POSITIVE_INFINITY
+  for (var num in array){
+    if (array[num] < min_so_far) {
+      min_so_far = array[num];
+    };
+  };
+  return min_so_far
 }
 
 export function findMaxValueInArray(array) {
   // Your code goes here...
+  var max_so_far = Number.NEGATIVE_INFINITY
+  for (var num in array){
+    if (array[num] > max_so_far) {
+      max_so_far = array[num];
+    };
+  };
+  return max_so_far
 }
 
+console.log(findMinValueInArray([1, 2, 3, 4]))
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"
 // If the test has all tests passed, switch to the next exercise file
