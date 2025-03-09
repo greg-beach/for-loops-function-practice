@@ -6,7 +6,16 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
+  var withdrawal_sums = [];
+  for (const bank in array){
+    if (!array[bank].hasOwnProperty('withdrawals')){
+      withdrawal_sums.push(0);
+      continue;
+    };
+    const sum = array[bank].withdrawals.reduce((accumulator, currentValue) => accumulator + currentValue);
+    withdrawal_sums.push(sum);
+  };
+  return withdrawal_sums;
 }
 
 // === TEST YOURSELF ===

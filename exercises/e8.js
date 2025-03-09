@@ -6,7 +6,15 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-
+  var highest_balance = [];
+  var highest_so_far = Number.NEGATIVE_INFINITY;
+  for (const bank in array) {
+    if (array[bank].balance > highest_so_far){
+      highest_balance = [array[bank]];
+      highest_so_far = array[bank].balance;
+    };
+  };
+  return highest_balance;
 }
 
 
