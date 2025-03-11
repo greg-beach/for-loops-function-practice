@@ -5,9 +5,21 @@
 // flatArrays([['d', 'r'], 'z', 'b', ['f', 'y']]) => ['d', 'r', 'z', 'b', 'f', 'y']
 // NOTE: You can NOT use the array.flat() method in your code
 
+import { i } from "vitest/dist/index-761e769b.js";
+
 export function flatArrays(array) {
   // Your code goes here...
-
+  var new_array = [];
+  for (const i in array){
+    if (array[i].length === 1) {
+      new_array.push(array[i]);
+      continue;
+    };
+    for (const j in array[i]){
+      new_array.push(array[i][j]);
+    };
+  };
+  return new_array
 }
 
 
