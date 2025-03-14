@@ -6,8 +6,8 @@
 
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
-  var lowest_balance = [];
-  var lowest_so_far = Number.POSITIVE_INFINITY;
+  let lowest_balance = [];
+  let lowest_so_far = array[0].balance;
   for (const bank in array){
     if (array[bank].balance > 0 && array[bank].balance < lowest_so_far) {
       lowest_balance = [array[bank]];

@@ -7,10 +7,10 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-  var has_a = []
-  var no_a = []
+  let has_a = []
+  let no_a = []
   for (let i=0; i < array.length; i++){
-    var trigger = false
+    let trigger = false
     for (const letter in array[i]){
       if (array[i][letter] === 'a') {
         trigger = true;

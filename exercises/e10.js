@@ -5,12 +5,12 @@
 
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
-  var account_holders = [];
-  for (const bank in array) {
-    const account_name = array[bank].name.toLowerCase();
-    if(account_name.includes(letter)) {
-      account_holders.push(array[bank].name);
-    };
+  let account_holders = [];
+  for (let user of array) {
+    for (let char of user.name){
+      if (char.toLowerCase() === letter.toLowerCase())
+        account_holders.push(user.name)
+    }
   };
   return account_holders;
 }

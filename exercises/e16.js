@@ -9,7 +9,7 @@ import { i } from "vitest/dist/index-761e769b.js";
 
 export function flatArrays(array) {
   // Your code goes here...
-  var new_array = [];
+  let new_array = [];
   for (const i in array){
     if (array[i].length === 1) {
       new_array.push(array[i]);

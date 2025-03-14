@@ -10,18 +10,21 @@
 // ]
 
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
-    var deposit_list = []
-    for (const bank in array){
-        if (!array[bank].hasOwnProperty('deposits')){
-          deposit_list.push(array[bank]);
-          continue;
-        };
-        const sum = array[bank].deposits.reduce((accumulator, currentValue) => accumulator + currentValue);
-        if (sum < 2000) {
-            deposit_list.push(array[bank]);
-        }
-      };
-      return deposit_list;
+  let deposit_sums = [];
+  for (const bank of array){
+    if (!bank.hasOwnProperty('deposits')){
+      deposit_sums.push(bank);
+      continue;
+    };
+    let total = 0;
+    for (const deposit of bank.deposits) {
+      total += deposit;
+    };
+    if (total < 2000) {
+      deposit_sums.push(bank)
+    };
+  };
+  return deposit_sums;
 }
 
 // === TEST YOURSELF ===

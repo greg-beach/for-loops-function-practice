@@ -6,9 +6,12 @@
 
 export function concatArrays(arr1, arr2) {
   // Your code goes here...
-  const new_arr = [...arr1]
-  for (const i in arr2){
-    new_arr.push(arr2[i])
+  const new_arr = []
+  for (const i in arr1){
+    new_arr.push(arr1[i])
+  }
+  for (const j in arr2){
+    new_arr.push(arr2[j])
   };
   return new_arr;
 }
